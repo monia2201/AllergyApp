@@ -1,0 +1,115 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="page-header">
+        <h1><br><br>Wypełnij formularz</h1>
+    </div>
+</div>
+
+<form role="form" action="/save" method="post">
+    <h3>Dane osobiste</h3>
+    <div class="form-group">
+        <label for="firstname">Imię:</label>
+        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Proszę wpisać imię"
+               required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Proszę wpisać e-mail" required>
+    </div>
+
+    <div class="form-group">
+        <label for="age">Wiek:</label>
+        <input type="number" class="form-control" id="age" name="age" min="6" max="60" placeholder="Wpisz swój wiek"
+               required>
+    </div>
+    <div class="form-group">
+        <label for="eyes">Kolor oczu:</label>
+        <input type="text" class="form-control" id="eyes" name="eyes" placeholder="Jaki masz kolor oczu?" required>
+    </div>
+
+    <div>
+        <b>Płeć:</b>
+        <div class="form-group">
+            <label class="radio-inline">
+                <input type="radio" name="sex" value=1 required>Kobieta</label>
+            <label class="radio-inline">
+                <input type="radio" name="sex" value=0 required>Mężczyzna</label>
+        </div>
+    </div>
+
+    <br>
+    <h3> Odpowiedz na kilka pytań</h3>
+    <b>1. Czy ktoś z Twoich rodziców/przodków choruje lub chorował na przewlekły katar i/lub astmę?</b>
+    <div class="form-group">
+        <label class="radio-inline">
+            <input type="radio" name="q1" id="q1" value="Tak">Tak</label>
+        <label class="radio-inline">
+            <input type="radio" name="q1" value="Nie">Nie</label>
+    </div>
+    <b>2. Czy cierpisz z powodu swędzących, czerwonych oczu w ciągu roku?</b>
+    <div class="form-group">
+        <label class="radio-inline">
+            <input type="radio" name="q2" value="Tak">Tak</label>
+        <label class="radio-inline">
+            <input type="radio" name="q2" value="Nie">Nie</label>
+    </div>
+    <b>3. Czy przez wiele kolejnych dni doskwiera Ci katar/niedrożność nosa/swędzenie nosa?</b>
+    <div class="form-group">
+        <label class="radio-inline">
+            <input type="radio" name="q3" value="Tak">Tak</label>
+        <label class="radio-inline">
+            <input type="radio" name="q3" value="Nie">Nie</label>
+    </div>
+    <b>4. Czy dolegliwości związane z nosem, oczami pogłębiają się szczególnie wiosną?</b>
+    <div class="form-group">
+        <label class="radio-inline">
+            <input type="radio" name="q4" id="q4" value="Tak">Tak</label>
+        <label class="radio-inline">
+            <input type="radio" name="q4" value="Nie">Nie</label>
+    </div>
+    <b>5. Czy kiedykolwiek słyszałeś/aś u siebie świszczący oddech?</b>
+    <div class="form-group">
+        <label class="radio-inline">
+            <input type="radio" name="q5" value="Tak">Tak</label>
+        <label class="radio-inline">
+            <input type="radio" name="q5" value="Nie">Nie</label>
+    </div>
+    <b>6. Czy kiedykolwiek miałeś/aś kaszel, duszności, nawet podczas ćwiczeń?</b>
+    <div class="form-group">
+        <label class="radio-inline">
+            <input type="radio" name="q6" value="Tak">Tak</label>
+        <label class="radio-inline">
+            <input type="radio" name="q6" value="Nie">Nie</label>
+    </div>
+    <b>7. Czy zdarza Ci się obudzić w nocy z powodu duszności, bądź kaszlu?</b>
+    <div class="form-group">
+        <label class="radio-inline">
+            <input type="radio" name="q7" value="Tak">Tak</label>
+        <label class="radio-inline">
+            <input type="radio" name="q7" value="Nie">Nie</label>
+    </div>
+    <b>8. Czy często używasz aerozoli do nosa?</b>
+    <div class="form-group">
+        <label class="radio-inline">
+            <input type="radio" name="q8" value="Tak">Tak</label>
+        <label class="radio-inline">
+            <input type="radio" name="q8" value="Nie">Nie</label>
+    </div>
+    <b>9. Czy odczuwasz, że Twoje objawy nosowe pogarszają się w zakurzonym środowisku?</b>
+    <div class="form-group">
+        <label class="radio-inline">
+            <input type="radio" name="q9" value="Tak">Tak</label>
+        <label class="radio-inline">
+            <input type="radio" name="q9" value="Nie">Nie</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-lg">Zapisz</button>
+
+</form>
+
+
+{% endblock %}

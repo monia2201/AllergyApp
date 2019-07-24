@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="jumbotron">
+    <br><br>
+    <h2>Proszę odpowiedzieć na kilka poniższych pytań</h2>
+    <br><br>
+
+
+    <form role="form" action="/save" method="post">
+        <div data-toggle="buttons">
+            <div class="btn-group">
+                <b>1. Czy ktoś z Twojej rodziny jest alergikiem?</b>
+                <div class="form-group">
+                    <label class="radio-inline">
+                        <input type="radio" name="q1" >Tak
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="q1" >Nie
+                    </label>
+                </div>
+            </div>
+        </div>
+
+
+        <b>2. Czy cierpisz na przewlekły katar?</b>
+        <div class="form-group">
+            <label class="radio-inline">
+                <input type="radio" name="q2" >Tak
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="q2" >Nie
+            </label>
+        </div>
+
+        <b>3. Czy katar ma formę wodnistą i jest obfity?</b>
+        <div class="form-group">
+            <label class="radio-inline">
+                <input type="radio" name="q3" >Tak
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="q3" >Nie
+            </label>
+        </div>
+
+        <b>4. Czy masz łzawiące, swędzące oczy, bądź nawracające zapalenie spojówek?</b>
+        <div class="form-group">
+            <label class="radio-inline">
+                <input type="radio" name="q4" >Tak
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="q4" >Nie
+            </label>
+        </div>
+
+        <b>5. Czy częstro kichasz?</b>
+        <div class="form-group">
+            <label class="radio-inline">
+                <input type="radio" name="q5" >Tak
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="q5" >Nie
+            </label>
+        </div>
+
+        <b>6. Czy cierpisz na częste, nawracające infekcje górnych dróg oddechowych?</b>
+        <div class="form-group">
+            <label class="radio-inline">
+                <input type="radio" name="q6" >Tak
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="q6" >Nie
+            </label>
+        </div>
+
+        <b>7. Czy często odczuwasz drapanie w gardle?</b>
+        <div class="form-group">
+            <label class="radio-inline">
+                <input type="radio" name="q7" >Tak
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="q7" >Nie
+            </label>
+        </div>
+
+        <b>8. Czy pojawia Ci się wysypka na skórze z nieznanych dla Ciebie przyczyn, szczególnie w okresie
+            wiosennym?</b>
+        <div class="form-group">
+            <label class="radio-inline">
+                <input type="radio" name="q8" >Tak
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="q8" >Nie
+            </label>
+        </div>
+
+        <b>9. Czy miewasz nerwowy sen, przerywany chrapaniem lub dusznościami?</b>
+        <div class="form-group">
+            <label class="radio-inline">
+                <input type="radio" name="q9" >Tak
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="q9" >Nie
+            </label>
+        </div>
+
+        <b>10. Czy bywasz przemęczony, szybciej się męczysz, miewasz zadyszkę?</b>
+        <div class="form-group">
+            <label class="radio-inline">
+                <input type="radio" name="q10" >Tak
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="q10" >Nie
+            </label>
+        </div>
+
+        <a href="/raw" role="button" class="btn btn-primary btn-lg">Wyślij</a>
+    </form>
+</div>
+{% endblock %}
